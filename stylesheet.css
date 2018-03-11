@@ -17,8 +17,8 @@ body {
     opacity: 1;
     visibility: visible !important;
     padding: 20px;
-    height: 140px;
-    width: 140px;
+    height: 100px;
+    width: 100px;
     border: 1px solid #444;
     border-radius: 100%;
     display: flex !important;
@@ -41,7 +41,7 @@ body {
     width: 180px;
     border-radius: 100%;
     background-size: cover;
-    top: 0px;
+    top: -180px;
     left: calc(50vw - 90px);
     position: absolute;
 }

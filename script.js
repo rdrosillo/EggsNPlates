@@ -22,10 +22,26 @@ $(document).ready(function() {
 		console.log(egg);
 	}
 	update();
+	function makeItRain() {
+		newPlate();
+		setTimeout(makeItRain, 1000);
+	}
+	makeItRain();
 });
 
 function newPlate() {
-	$(plateString).append()
+	var plateObj = $(plateString);
+	$(".container").append(plateObj);
+	var randomX = (100 * Math.random()).toString() + "vw";
+	plateObj.css("left", randomX)
+
+
+	plateObj.animate({
+		"top": "100vh"
+	}, 1000);
+	setTimeout(function() {
+		plateObj.remove();
+	}, 1000);
 }
 
 function update() {
@@ -34,10 +50,6 @@ function update() {
 	});
 
 	$('.invisible').click(function() {
-		count -= 140
-		var newThing = $(ballString);
-		newThing.css("top", count + "px")
-		$('.container').append(newThing);
 		update();
 	});
 }
